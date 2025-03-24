@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Check if the repository is private
+      - name: Check if the repository is public
         run: exit 1
         if: ${{github.event.repository.private}}
       - name: Tests
